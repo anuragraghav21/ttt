@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="{% static 'ttt/css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+  <title>Terribly Tiny Tales</title>
+</head>
+<body>
+
+  <nav class="black darken-2" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/chat/home/" class="brand-logo">Frequent Words</a>
+    </div>
+  </nav>
+
+
+<div class="row">
+<div class="section no-pad-bot">
+  <div class="main container">
+
+    <div class="input-field col s12">
+      <input id="n_value" type="number" min="0" class="validate">
+      <label>Enter 'n' to retrieve n most frequent words</label>
+    </div>
+    <br><br><br><br><br>
+    <center><a class="waves-effect waves-light btn black" id="retrieve">Retrieve</a><center>
+    <br><br><br><br><br>
+    <table class="centered striped responsive-table" id="frequencies"></table>
+  </div>
+</div>
+</div>
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="{% static 'ttt/js/init.js' %}"></script>
+
+</body>
+</html>
+

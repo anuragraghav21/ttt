@@ -1,0 +1,5 @@
+sftp-config.json
+.DS_Store
+*.pyc
+*.sqlite3
+ttt/migrations/00*
