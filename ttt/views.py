@@ -32,6 +32,7 @@ class RetrieveAPIView(APIView):
 					word = word.strip(char)
 				if not word:
 					continue
+				word = word.lower()
 				if word not in frequency:
 					frequency[word] = 1
 				else:
