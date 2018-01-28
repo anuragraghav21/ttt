@@ -40,7 +40,7 @@ $('#retrieve').click(function(){
         },
         error: function(){
             $('#frequencies').hide();
-            Materialize.toast('Invalid number', 2000);
+            Materialize.toast('Something went wrong!', 2000);
         }
     });
 });

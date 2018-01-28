@@ -16,8 +16,11 @@ class RetrieveAPIView(APIView):
 
 	def get(self, request, *args, **kwargs):
 		n = request.GET.get('n', 0)
-		n = int(n)
-		if n<0:
+		try:
+			n = int(n)
+			if n<0:
+				return Response({'Error': 'Invalid input'})
+		except:
 			return Response({'Error': 'Invalid input'})
 		fin = urllib.request.urlopen('http://terriblytinytales.com/test.txt')
 		frequency = dict()
